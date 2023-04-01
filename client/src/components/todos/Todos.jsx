@@ -20,7 +20,7 @@ export const Todos = ({ tasks }) => {
                     <tr>
                         <td headers="task">{row.task}</td>
                         <td headers="state">
-                            <p className={`state${row.ext_state}`}>{row.ext_state}</p>
+                            <p className={`state${row.id_state}`}>{row.state}</p>
                         </td>
                         <td headers="action">
                             <Button variant="change">

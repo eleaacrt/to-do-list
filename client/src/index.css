@@ -49,19 +49,28 @@ table.table--todos thead {
   width: 30%;
 }
 
+table.table--todos thead {
+  border-bottom: 1px solid #000;
+}
+
+
 table.table--todos tbody {
   width: 70%;
 }
 
-table.table--todos tbody tr td p {
+table.table--todos tbody tr td[headers="state"] p{
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 55%;
 }
 
-table.table--todos tbody tr td[headers="state"] {
+table.table--todos tbody tr td{
+  font-weight: 400;
   font-size: 1.125rem;
-  font-weight: 600;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 0.85rem;
+  text-align: left;
 }
 
 p.state1 {

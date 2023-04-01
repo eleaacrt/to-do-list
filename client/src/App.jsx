@@ -5,9 +5,10 @@ import { Todos } from './components/todos/Todos';
 function App() {
 
   const [tasks, setTasks] = useState([])
+  const [states, setStates] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/tasks', {
+    fetch('http://localhost:3001/api', {
       method: 'GET',
     })
       .then((res) => res.json())

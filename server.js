@@ -25,8 +25,8 @@ db.connect((err) => {
 
 app.use(cors()); // utiliser le middleware cors pour résoudre les erreurs de CORS
 
-app.get('/api/tasks', (req, res) => { // utiliser l'URL /api pour récupérer les données
-  db.query('SELECT * FROM task', (err, result) => {
+app.get('/api', (req, res) => { // utiliser l'URL /api pour récupérer les données
+  db.query('SELECT * FROM task, state WHERE ext_state=id_state', (err, result) => {
     if (err) {
       throw err;
     }

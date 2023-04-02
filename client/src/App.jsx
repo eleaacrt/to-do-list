@@ -5,7 +5,10 @@ import { Todos } from './components/todos/Todos';
 function App() {
 
   const [tasks, setTasks] = useState([])
-  const [states, setStates] = useState([])
+  
+  const handleDelete = (id) => {
+    setTasks((prevState) => prevState.filter((tasks) => tasks.id_task !== id));
+  };
 
   useEffect(() => {
     fetch('http://localhost:3001/api', {
@@ -13,7 +16,6 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setTasks(data)
       })
       .catch((err) => {
@@ -26,7 +28,8 @@ function App() {
       <h1>To-do list</h1>
       <Todos
         tasks={tasks}
-        // states={states}
+        onClick={handleDelete}
+        setTasks={setTasks}
       />
     </>
   );

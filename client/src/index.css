@@ -33,13 +33,21 @@ h1 {
 /* ------------------ DIV TODOS ------------------- */
 /* ------------------------------------------------ */
 
-table.table--todos {
+div.div--todos{
   width: 58%;
   background-color: #fff;
   margin: 4rem auto;
   padding: 2rem 8rem;
   border-radius: 10px;
   border: 1px solid #000;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+table.table--todos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
 }
 
 table.table--todos thead {
@@ -49,16 +57,24 @@ table.table--todos thead {
   width: 30%;
 }
 
-table.table--todos thead {
+table.table--todos thead tr th {
   border-bottom: 1px solid #000;
+  /* border-collapse: separate;
+  border-spacing: 5px 5px; */
+  padding-bottom: 1.8rem;
 }
 
-
 table.table--todos tbody {
+  border-collapse: separate;
+  border-spacing: 5px 5px;
   width: 70%;
 }
 
-table.table--todos tbody tr td[headers="state"] p{
+table.table--todos tbody tr td {
+  padding: 0.5rem 0;
+}
+
+table.table--todos tbody tr td[headers="state"] p {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   font-weight: 600;
@@ -67,7 +83,7 @@ table.table--todos tbody tr td[headers="state"] p{
   width: 55%;
 }
 
-table.table--todos tbody tr td{
+table.table--todos tbody tr td {
   font-weight: 400;
   font-size: 1.125rem;
   text-align: left;
@@ -106,4 +122,24 @@ button {
   background-color: #fff;
   padding: 0;
   margin: 0.5rem;
+}
+
+/* ------------------------------------------------ */
+/* ------------------ ADD TASK -------------------- */
+/* ------------------------------------------------ */
+
+form.form--addtask {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-left: -2rem;
+}
+
+form.form--addtask input {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  margin-left: 0.85rem;
 }

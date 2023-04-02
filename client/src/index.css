@@ -143,3 +143,25 @@ form.form--addtask input {
   font-size: 0.85rem;
   margin-left: 0.85rem;
 }
+
+/* ------------------------------------------------ */
+/* ------------------ SEARCH BAR ------------------ */
+/* ------------------------------------------------ */
+
+form.form--searchbar {
+  margin: auto;
+  width: 58%;
+  background-color: #fff;
+  padding: 1rem 2.6rem;
+  margin-top: 7rem;
+  border-radius: 10px;
+}
+
+form.form--searchbar input {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  width: 100%;
+  padding-bottom: 0.5rem ;
+  border-bottom: 1px solid #000;
+}

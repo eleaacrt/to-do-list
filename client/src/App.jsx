@@ -1,6 +1,7 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
 import { Todos } from './components/todos/Todos';
+import { SearchBar } from './components/searchBar/SearchBar';
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
   return (
     <>
       <h1>To-do list</h1>
+      <SearchBar
+        setTasks={setTasks}
+      />
       <Todos
         tasks={tasks}
         onClick={handleDelete}

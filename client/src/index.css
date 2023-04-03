@@ -165,3 +165,7 @@ form.form--searchbar input {
   padding-bottom: 0.5rem ;
   border-bottom: 1px solid #000;
 }
+
+.hidden {
+  display: none;
+}

@@ -3,9 +3,7 @@ import { AddTask } from '../addTask/AddTask';
 import { ReactComponent as DeleteIcon } from '../../assets/img/delete.svg'
 import { ReactComponent as UpdateIcon } from '../../assets/img/update.svg'
 
-export const Todos = ({ tasks, onClick, setTasks, handleAdd }) => {
-
-    console.log(tasks);
+export const Todos = ({ tasks, onClick, setTasks, search }) => {
 
     return (
         <>
@@ -19,7 +17,14 @@ export const Todos = ({ tasks, onClick, setTasks, handleAdd }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {tasks && tasks.map((row) => (
+
+                        {tasks.filter(row => {
+                            if (search === "") {
+                                return row;
+                            } else if (row.task.toLowerCase().includes(search.toLowerCase())) {
+                                return row;
+                            }
+                        }).map((row) => (
                             <tr>
                                 <td headers="task">{row.task}</td>
                                 <td headers="state">
@@ -36,7 +41,7 @@ export const Todos = ({ tasks, onClick, setTasks, handleAdd }) => {
                                                 method: 'DELETE',
                                             })
                                                 .then((res) => res.json())
-                                                .then((data) => {
+                                                .then(() => {
                                                     console.log(row.id_task)
                                                     onClick(row.id_task)
                                                 })
@@ -53,7 +58,7 @@ export const Todos = ({ tasks, onClick, setTasks, handleAdd }) => {
                     </tbody>
                 </table>
                 <AddTask
-                setTasks={setTasks}
+                    setTasks={setTasks}
                 />
             </div>
         </>

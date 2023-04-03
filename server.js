@@ -56,7 +56,7 @@ app.delete('/api/:id', (req, res) => {
     });
 });
 
-app.post('/api', (req, res) => {
+app.post('/api', (req, res) => {0
     const query = `INSERT INTO task VALUES (NULL,"${req.body.task}",1)`;
     db.query(query, (err, result) => {
         if (err) {

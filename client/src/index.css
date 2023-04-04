@@ -74,7 +74,18 @@ table.table--todos tbody tr td {
   padding: 0.5rem 0;
 }
 
-table.table--todos tbody tr td[headers="state"] p {
+table.table--todos tbody tr td[headers="task"] {
+  width: 50%;
+}
+
+table.table--todos tbody tr td[headers="state"] {
+  width: 45%;
+}
+
+table.table--todos tbody tr td[headers="state"] p,
+select {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
   padding: 0.5rem 1rem;
   border-radius: 10px;
   font-weight: 600;
@@ -83,32 +94,37 @@ table.table--todos tbody tr td[headers="state"] p {
   width: 55%;
 }
 
+option {
+  text-align: left;
+}
+
 table.table--todos tbody tr td {
   font-weight: 400;
   font-size: 1.125rem;
   text-align: left;
 }
 
-p.state1 {
+.state1 {
   background-color: #56CCF2;
 }
 
-p.state2 {
+.state2 {
   background-color: #F2C94C;
 }
 
-p.state3 {
+.state3 {
   background-color: #6FCF97;
 }
 
-p.state4 {
+.state4 {
   background-color: #EB5757;
 }
+
 
 td[headers="action"] {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 /* ------------------------------------------------ */

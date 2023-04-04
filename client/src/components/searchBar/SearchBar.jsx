@@ -1,5 +1,5 @@
 // https://blog.logrocket.com/create-search-bar-react-from-scratch/
-// -> search bar en react
+// -> search bar
 
 export const SearchBar = ({ setSearch }) => {
     const handleSearchChange = (e) => {
